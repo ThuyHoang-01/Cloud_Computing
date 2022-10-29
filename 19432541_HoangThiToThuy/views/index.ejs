@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THI GIUA KY</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div class="content">
+        <h1 style="color: red"> Công ty ABZ</h1>
+        <form action="/delete" id="delete" method="POST" enctype="multipart/form-data">
+            <div class="title"> <h1 style="color: rgb(60, 43, 213)">Danh Sách Sản Phẩm </h1> </div>
+        <table border="1">
+            <tr>
+                <th>Ma San Pham</th>
+                <th>Ten San Pham</th>
+                <th>So Luong</th>
+                <th>Chon</th>
+                <th>Hinh anh</th>
+            </tr>
+            <% for (let i = 0; i < sanPhams.length; i++) { %>
+                <tr>
+                    <td><%=sanPhams[i].ma_sp%></td>
+                    <td><%=sanPhams[i].ten_sp%></td>
+                    <td><%=sanPhams[i].so_luong%></td>
+                    <td> <input type="checkbox" name="<%=sanPhams[i].ma_sp%>"></td>
+                </tr>
+
+            <% } %>
+
+        </table>
+        <input type="submit" value="Xoa" class="button button2" /> 
+     </form>
+
+     <form action="/add" method="GET" enctype="multipart/form-data">
+        <input type="submit" value="Thêm" class="button button1">
+    </form>
+
+    </div>
+</body>
+</html>

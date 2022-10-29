@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+        .title {
+            color: red;
+            font-weight: bold;
+        }
+        
+        .header__title {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+      
+                        <form action="/add_sp" method="post" enctype="multipart/form-data">
+                            <h3 class="text-center">Thêm mới 01 sản phẩm</h3>
+                            <div class="mb-3 row justify-content-md-center">
+                                <label for="ma_sp" class="form-label">Mã sản phẩm:</label>
+                                <input type="text" name="ma_sp" class="form-control" id="ma_sp" />
+
+                                <label for="ten_sp" class="form-label">Tên Sản Phẩm :</label>
+                                <input type="text" name="ten_sp" class="form-control" id="ten_sp" />
+
+                                <label for="so_luong" class="form-label">Số Lượng :</label>
+                                <input type="text" name="so_luong" class="form-control" id="so_luong" />
+
+                                <div class="d-flex flex-row-reverse bd-highlight ">
+                                    <input class="btn btn-primary col-3 mt-3" type="submit" value="Thêm">
+                                </div>
+                            </div>
+                        </form>
+    </div>
+</body>
+</html>

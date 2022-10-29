@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+        .title {
+            color: red;
+            font-weight: bold;
+        }
+        
+        .header__title {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+     <div class="container mt-4">
+
+        <div class="container">
+            <h4 class="title">Công ty TINH ABC CN Sài Gòn</h2>
+                <div class="row">
+                    <h2 class="text-center header__title col">DANH MỤC CÁC SẢN PHẨM </h1>
+                        <a class="btn btn-primary col-1" href="/addPrd" role="button">Thêm</a>
+                </div>
+
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">MÃ SẢN PHẨM</th>
+                    <th scope="col">TÊN SẢN PHẨM </th>
+                    <th scope="col"> SỐ LƯỢNG</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Hình ảnh</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <% for (let i = 0; i < sanPhams.length; i++) { %>
+                       
+                       <td >
+                            <%= sanPhams[i].ma_sp %>
+                        </td>
+                        <td >
+                            <%= sanPhams[i].ten_sp %>
+                        </td>
+                        <td>
+                            <%= sanPhams[i].so_luong %>
+                        </td>
+                        <td>
+                            <a href="/delete/<%=sanPhams[i].ma_sp%>">Xóa</a>
+                        </td>
+                        </tr>
+                        <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THI GIUA KY</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <h4 style="color: red"> CÔNG TY ABZ</h4>
+    <div class="content">
+        <h1>Danh Sách Nhân viên</h1>
+        <form id="create" method="POST" action="/" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>Nhập mã san pham:</td>
+                    <td><input type="text" name="ma_sp" placeholder="" id="ma_sp" pattern="[A-Za-z0-9 ]+" /></td>
+                </tr>
+                <tr>
+                    <td>Nhập tên san pham:</td>
+                    <td><input type="text" name="ten_sp" placeholder=""  id="ten_sp" required pattern="[A-Za-z0-9 ]+" /></td>
+                </tr>
+                <tr>
+                    <td>Nhập so luong:</td>
+                    <td><input type="text" name="so_luong" placeholder="" id="so_luong" pattern="[A-Za-z0-9 ]+" /></td>
+                </tr>
+    
+            </table>
+
+            <input type="submit" value="Thêm" class="button button1 center" />
+        </form>
+        <form action="/" method="GET" enctype="multipart/form-data" id="back">
+            <input type="submit" value="Quay lại" class="button button2">
+        </form>
+    </div>
+</body>
+
+</body>
